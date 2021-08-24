@@ -5,12 +5,12 @@ import { Car } from '../models/car';
   selector: 'cars-list',
   templateUrl: './cars-list.component.html',
   styleUrls: ['./cars-list.component.less'],
-  encapsulation: ViewEncapsulation.None,
+  encapsulation: ViewEncapsulation.None
 })
 export class CarsListComponent implements OnInit {
 
-  totalCost ?: number;
-
+  totalCost : any;
+  grossCost : any;
   cars : Car[]= [
     {
     id: 1,
@@ -63,5 +63,9 @@ export class CarsListComponent implements OnInit {
     this.totalCost = this.cars
       .map((car) => car.cost)
       .reduce((prev, next) => prev + next);
+  }
+
+  onShownGross(grossCost : number) : void {
+    this.grossCost = grossCost;
   }
 }
