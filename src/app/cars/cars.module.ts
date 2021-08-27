@@ -1,3 +1,4 @@
+import { CarResolve } from './car-resolve.service';
 import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -12,6 +13,11 @@ import { CarDetailsComponent } from './car-details/car-details.component';
   exports: [
     CarsListComponent
   ],
+
+  providers: [
+    CarResolve
+  ],
+
   declarations: [
     CarsListComponent,
     TotalCostComponent,
