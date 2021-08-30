@@ -24,4 +24,9 @@ export class CarsService {
     return this.http.get(this.apiUrl + `/${id}`)
       .pipe(map((res: any) => res))
   }
+
+  addCar(data: any) : Observable<Car> {
+    return this.http.post(this.apiUrl, data)
+      .pipe(map((res: any) => res))
+  }
 }
