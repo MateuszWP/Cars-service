@@ -42,15 +42,23 @@ export class CarsListComponent implements OnInit {
       clientFirstName: '',
       clientSurname: '',
       cost: '',
+      color: '',
       isFullyDamaged: '',
-    })
+      year: ''
+    });
   }
 
   loadCars() : void {
     this.carsService.getCars().subscribe((cars) => {
       this.cars = cars;
       this.countTotalCost();
-    })
+    });
+  }
+
+  addCar() {
+    this.carsService.addCar(this.carForm.value).subscribe(() => {
+      this.loadCars();
+    });
   }
 
   goToCarDetails(car : Car) {
