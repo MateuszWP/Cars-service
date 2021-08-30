@@ -1,15 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
-
-
+import { SurnameShortcutPipe } from './pipes/surname-shortcut.pipe';
 
 @NgModule({
   exports: [
-    HeaderComponent
+    HeaderComponent,
+    SurnameShortcutPipe
   ],
   declarations: [
-    HeaderComponent
+    HeaderComponent,
+    SurnameShortcutPipe
   ],
   imports: [
     CommonModule
