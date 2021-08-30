@@ -6,8 +6,7 @@ import { CarsListComponent } from './cars-list/cars-list.component';
 import { TotalCostComponent } from './total-cost/total-cost.component';
 import { SharedModule } from '../shared-module/shared.module';
 import { CarDetailsComponent } from './car-details/car-details.component';
-
-
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   exports: [
@@ -26,7 +25,8 @@ import { CarDetailsComponent } from './car-details/car-details.component';
   imports: [
     CommonModule,
     SharedModule,
-    RouterModule
+    RouterModule,
+    ReactiveFormsModule
   ]
 })
 export class CarsModule { }
