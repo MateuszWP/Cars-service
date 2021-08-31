@@ -68,6 +68,13 @@ export class CarsListComponent implements OnInit {
     //this.totalCostRef.showGross();
   //)
 
+  removeCar(car : Car, event : any) {
+    event.stopPropagation();
+    this.carsService.removeCar(car.id).subscribe(() => {
+      this.loadCars();
+    });
+  }
+
   showGross() : void {
     this.totalCostRef.showGross();
   }

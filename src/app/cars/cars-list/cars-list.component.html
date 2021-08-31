@@ -29,7 +29,7 @@
             <td> {{ car?.deadline | date: 'shortDate'}} </td>
             <td> {{ car?.clientFirstName }} {{ car.clientSurname | surnameShortcut}} </td>
             <td csImportant> {{ car?.cost | currency: 'PLN' : true }} </td>
-            <td> Action Placeholder </td>
+            <td (click)="removeCar(car, $event)"> ( X ) </td>
           </tr>
         </tbody>
       </table>
