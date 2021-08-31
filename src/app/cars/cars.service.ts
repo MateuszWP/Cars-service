@@ -34,4 +34,10 @@ export class CarsService {
     return this.http.put(this.apiUrl + `/${id}`, data)
       .pipe(map((res: any) => res))
   }
+
+  removeCar(id: number) : Observable<Car> {
+    return this.http.delete(this.apiUrl + `/${id}`)
+      .pipe(map((res: any) => res))
+  }
+
 }
